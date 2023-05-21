@@ -26,9 +26,34 @@
       box-shadow: -20px 20px 150px #f20044;
       animation: palpitar 0.6s linear infinite alternate;
     }
+    .heart2 {
+      height: 100px;
+      width: 100px;
+      background-color: #df7a92 ;
+      position: relative;
+      right: 650px;
+      bottom: 150px;
+      transform: rotate(45deg);
+      box-shadow: -20px 20px 150px #df7a92;
+      animation: palpitar 0.6s linear infinite alternate;
+    }
+    .heart3{
+      height: 100px;
+      width: 100px;
+      background-color: #e8b6c3;
+      position: relative;
+      left: 400px;
+      bottom: 150px;
+      transform: rotate(45deg);
+      box-shadow: -20px 20px 150px #e8b6c3 ;
+      animation: palpitar 0.6s linear infinite alternate;
+
+
+    }
     .contenido{
         position: fixed;
         margin-bottom: 50px;
+        left: 550px;
         text-align: center;
     }
     h1{color: white};
@@ -50,6 +75,29 @@
       border-radius: 50% ;
       box-shadow: 20px 20px 150px #f20044;
     }
+    .heart2::before{
+      content: "";
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      background: #df7a92;
+      right: 50%;
+      border-radius: 50% ;
+      box-shadow: 20px 20px 150px #df7a92;
+
+    }    
+
+    .heart3::before{
+      content: "";
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      background: #e8b6c3 ;
+      right: 50%;
+      border-radius: 50% ;
+      box-shadow: 20px 20px 150px #e8b6c3;
+
+    }
     .heart::after{
         content: "";
         position: absolute;
@@ -60,6 +108,28 @@
         border-radius: 50% ;
         box-shadow: 20px 20px 150px #f20044;
     }
+    .heart2::after{
+      content: "";
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      background: #df7a92;
+      top: -50%;
+      border-radius: 50% ;
+      box-shadow: 20px 20px 150px #df7a92;
+    }
+      .heart3::after{
+        content: "";
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        background: #e8b6c3;
+        top: -50%;
+        border-radius: 50% ;
+        box-shadow: 20px 20px 150px #e8b6c3;
+
+    }
+    
     .fcc-btn {
         background-color: #e82c89;
         color: white;
@@ -70,12 +140,41 @@
     .fcc-btn:hover {
         background-color: #ff90d0;
     }
+    .audio{
+      
+         position:absolute;
+         top:85%;
+         left:35%;
+      }
+      .taudio{
+        position: fixed;
+        margin-bottom: 50px;
+        left: 550px;
+        top: 600px;
+        text-align: center;
+        color: black;
+        background-color: #f20044;
+    }
   </style>
   <body>
     <div class="heart"></div>
+    <div class="heart2"></div>
+    <div class="heart3"></div>
+
+
     <div class="contenido">
       <h1>Te amo Guadalupe</h1>
-      <a class="fcc-btn" href="Confesion/index.html">Carta</a>
+      <a class="fcc-btn" href="Confesion/index.html">Mensaje</a>
     </div>
+    <div class="taudio">
+      <h1>Escucha la canción</h1>
+    </div>
+
+    <audio controls class="audio" >
+      <source src="yoko.mp3" type="audio/mp3">
+      <source src="forelisa.ogg" type="audio/ogg">
+      <source src="forelisa.wav" type="audio/wav">
+          Tu navegador no soporta audio HTML5.
+  </audio>
   </body>
 </html>
